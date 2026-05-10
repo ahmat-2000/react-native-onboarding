@@ -4,10 +4,8 @@ export {
   type OnboardingProps,
   type OnboardingScrollViewProps,
 } from "./OnboardingRoot";
-export { Slide, SlideImage, type SlideProps, type SlideImageProps } from "./Slide";
-export { Body, type BodyProps } from "./Body";
+export { Slide, type SlideProps } from "./Slide";
 export { Bottom, type BottomProps } from "./Bottom";
-export { Title, Subtitle, type TitleProps } from "./Title";
 export { Dots, type DotsProps } from "./Dots";
 export { NextButton, type NextProps } from "./NextButton";
 export { SkipButton, type SkipProps } from "./SkipButton";

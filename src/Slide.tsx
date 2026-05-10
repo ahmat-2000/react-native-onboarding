@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import { Image, StyleSheet, type ViewStyle, type ImageProps } from "react-native";
+import { type ViewStyle } from "react-native";
 import Animated, {
   Extrapolation,
   interpolate,
@@ -39,8 +39,7 @@ export function Slide({
   return (
     <Animated.View
       style={[
-        styles.slide,
-        backgroundColor != null ? { backgroundColor } : null,
+        backgroundColor && { backgroundColor },
         animStyle,
         style,
       ]}
@@ -51,21 +50,3 @@ export function Slide({
 }
 
 Slide.displayName = "Onboarding.Slide";
-
-export type SlideImageProps = ImageProps;
-
-export function SlideImage({ style, ...props }: SlideImageProps) {
-  return (
-    <Image {...props} resizeMode="contain" style={[styles.image, style]} />
-  );
-}
-
-SlideImage.displayName = "Onboarding.Image";
-
-const styles = StyleSheet.create({
-  slide: {
-    flex: 1,
-    paddingHorizontal: 24,
-  },
-  image: { width: "80%", height: 280 },
-});
