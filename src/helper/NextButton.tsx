@@ -16,7 +16,6 @@ export type NextProps = PressableProps & {
   doneLabel?: string;
   children?: ReactNode;
   textStyle?: TextStyle;
-  style?: ViewStyle;
 };
 
 export function NextButton({
@@ -33,7 +32,7 @@ export function NextButton({
       onPress={goNext}
       hitSlop={12}
       {...rest}
-      style={({ pressed }) => [styles.pressable, pressed && styles.pressed, style]}
+      style={({ pressed }) => [styles.pressable, pressed && styles.pressed, style as ViewStyle]}
     >
       {children ?? (
         <Text style={[styles.label, textStyle]}>
