@@ -2,7 +2,6 @@ import React, { Children, type ReactNode } from "react";
 import { StyleSheet, View, type ViewStyle } from "react-native";
 
 export type BottomProps = {
-  /** Up to three children: leading, center, trailing (e.g. Skip · Dots · Next). */
   children: ReactNode;
   style?: ViewStyle;
 };

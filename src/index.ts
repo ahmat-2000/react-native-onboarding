@@ -1,20 +1,16 @@
 export { Onboarding, type OnboardingCompound } from "./Onboarding";
 export {
   OnboardingRoot,
-  type OnboardingProps,
-  type OnboardingScrollViewProps,
-} from "./OnboardingRoot";
-export { Slide, type SlideProps } from "./Slide";
-export { Bottom, type BottomProps } from "./Bottom";
-export { Dots, type DotsProps } from "./Dots";
-export { NextButton, type NextProps } from "./NextButton";
-export { SkipButton, type SkipProps } from "./SkipButton";
+} from "./core/OnboardingRoot";
+export { Slide, type SlideProps } from "./core/Slide";
+export { Bottom, type BottomProps } from "./helper/Bottom";
+export { Dots, type DotsProps } from "./helper/Dots";
+export { NextButton, type NextProps } from "./helper/NextButton";
+export { SkipButton, type SkipProps } from "./helper/SkipButton";
 
 export {
   OnboardingContext,
   SlideContext,
-  useOnboarding,
-  useSlide,
-  useSlideProgress,
-} from "./context";
-export type { OnboardingCtx, SlideCtx } from "./context";
+} from "./core/context";
+export type { OnboardingCtx, SlideCtx, OnboardingScrollViewProps, OnboardingProps } from "./core/types";
+export { useOnboarding, useSlide, useSlideProgress } from "./core/hooks";

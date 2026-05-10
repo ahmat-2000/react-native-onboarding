@@ -13,8 +13,6 @@ import {
   StyleSheet,
   useWindowDimensions,
   View,
-  type ScrollViewProps,
-  type ViewStyle,
 } from "react-native";
 import Animated, {
   interpolateColor,
@@ -26,34 +24,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { scheduleOnRN } from "react-native-worklets";
 import { OnboardingContext, SlideContext } from "./context";
 import { Slide, type SlideProps } from "./Slide";
-
-/**
- * Extra props forwarded to the inner horizontal `Animated.ScrollView`.
- * Scroll position is driven by Reanimated — `onScroll` is intentionally omitted.
- */
-export type OnboardingScrollViewProps = Omit<
-  ScrollViewProps,
-  | "horizontal"
-  | "pagingEnabled"
-  | "children"
-  | "onScroll"
-  | "scrollEventThrottle"
-  | "ref"
->;
-
-export type OnboardingProps = {
-  children: ReactNode;
-  /** Called when the user finishes the last slide. */
-  onDone: () => void;
-  /** Optional skip handler; `Skip` falls back to `onDone` when omitted. */
-  onSkip?: () => void;
-  style?: ViewStyle;
-  /** Merged into the root `Animated.View` (safe-area + interpolated background). */
-  contentContainerStyle?: ViewStyle;
-  /** Passed through to the horizontal pager `ScrollView` (fixed pager props win). */
-  scrollViewProps?: OnboardingScrollViewProps;
-  testID?: string;
-};
+import type { OnboardingProps } from "./types";
 
 function isSlideElement(
   child: ReactNode,

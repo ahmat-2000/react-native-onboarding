@@ -8,7 +8,7 @@ import {
   type TextStyle,
   type ViewStyle,
 } from "react-native";
-import { useOnboarding } from "./context";
+import { useOnboarding } from "../core/hooks";
 
 export type SkipProps = PressableProps & {
   label?: string;

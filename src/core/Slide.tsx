@@ -5,7 +5,7 @@ import Animated, {
   interpolate,
   useAnimatedStyle,
 } from "react-native-reanimated";
-import { useSlideProgress } from "./context";
+import { useSlideProgress } from "./hooks";
 
 export type SlideProps = {
   children: ReactNode;

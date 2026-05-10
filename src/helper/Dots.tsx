@@ -7,7 +7,7 @@ import Animated, {
   useAnimatedStyle,
   type SharedValue,
 } from "react-native-reanimated";
-import { useOnboarding } from "./context";
+import { useOnboarding } from "../core/hooks";
 
 export type DotsProps = {
   /** Inactive dot color (also used as endpoints when `activeColor` is set). */
