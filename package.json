@@ -1,6 +1,6 @@
 {
   "name": "@ahmat-2000/react-native-onboarding",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Composable onboarding slides for React Native — horizontal pager, dots, and footer without opinionated UI.",
   "keywords": [
     "react-native",
@@ -76,8 +76,18 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      ["commonjs", { "esm": true }],
-      ["module", { "esm": true }],
+      [
+        "commonjs",
+        {
+          "esm": true
+        }
+      ],
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
       "typescript"
     ]
   },
